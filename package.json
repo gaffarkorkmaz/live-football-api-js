@@ -1,0 +1,29 @@
+{
+  "name": "live-football-api",
+  "version": "1.0.0",
+  "description": "Official Node.js client for the Live Football API (live-football-api.com) - real-time scores, lineups, standings, H2H, injuries and goal webhooks.",
+  "main": "src/client.js",
+  "types": "src/client.d.ts",
+  "files": [
+    "src"
+  ],
+  "keywords": [
+    "football",
+    "soccer",
+    "football-api",
+    "soccer-api",
+    "live-scores",
+    "sports-api",
+    "live-football-api"
+  ],
+  "homepage": "https://live-football-api.com",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/forcescripts/live-football-api-js"
+  },
+  "author": "FORCESCRIPTS LTD",
+  "license": "MIT",
+  "engines": {
+    "node": ">=18"
+  }
+}
