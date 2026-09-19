@@ -8,7 +8,7 @@ const teamId = 'esa748l653sss1wurz5ps3228';
     try {
         const result = await client.teamSquad(teamId, null, 'en');
         for (const player of result.data.squad) {
-            console.log(player.number + ' ' + player.name + ' - ' + player.position);
+            console.log((player.number ?? '-') + ' ' + player.name + ' - ' + player.position);
         }
     } catch (err) {
         if (err instanceof ApiError) {

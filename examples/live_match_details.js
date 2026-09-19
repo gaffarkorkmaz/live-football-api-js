@@ -11,7 +11,13 @@ const matchId = '5ahxi4l9k8fkbj3n2r6hgdmac';
         console.log(header.home.name + ' ' + header.home.score + ' - ' + header.away.score + ' ' + header.away.name);
         console.log('Status: ' + header.status.display);
         for (const event of result.data.events) {
-            console.log(event.time + "' " + event.type + ' - ' + (event.detail.player ? event.detail.player.name : ''));
+            let detail = '';
+            if (event.type === 'substitution') {
+                detail = event.detail.out.name + ' -> ' + event.detail.in.name;
+            } else if (event.detail.player) {
+                detail = event.detail.player.name;
+            }
+            console.log(event.time + "' " + event.type + ' - ' + detail);
         }
     } catch (err) {
         if (err instanceof ApiError) {

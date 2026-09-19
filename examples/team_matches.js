@@ -8,7 +8,10 @@ const teamId = 'esa748l653sss1wurz5ps3228';
     try {
         const result = await client.teamMatches(teamId, null, 'en');
         for (const match of result.data.matches) {
-            console.log(match.date + ' ' + match.home.name + ' ' + match.home.score + '-' + match.away.score + ' ' + match.away.name + ' [' + match.league.name + ']');
+            const score = (match.home.score !== null && match.away.score !== null)
+                ? match.home.score + '-' + match.away.score
+                : 'vs';
+            console.log(match.date + ' ' + match.home.name + ' ' + score + ' ' + match.away.name + ' [' + match.league.name + ']');
         }
     } catch (err) {
         if (err instanceof ApiError) {
