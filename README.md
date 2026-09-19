@@ -100,7 +100,7 @@ Status: FT
 | `listWebhooks()` | List registered webhooks (free) |
 | `deleteWebhook(id)` | Remove a webhook by its numeric id (free) |
 
-Full parameter and response reference: [live-football-api.com/docs](https://live-football-api.com/docs.php)
+Full parameter and response reference: [live-football-api.com/docs](https://www.live-football-api.com/docs)
 
 ## Requirements
 
